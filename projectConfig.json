@@ -1,0 +1,18 @@
+{
+  "path": {
+    "src": {
+      "srcPath": "./src",
+      "html": [
+        "/**/*.html"
+      ],
+      "style": [
+        "/assets/css/app.scss"
+      ]
+    },
+    "dist": {
+      "distPath": "./dist",
+      "html": "/",
+      "style": "/assets/css/"
+    }
+  }
+}
