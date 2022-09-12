@@ -21,3 +21,77 @@ dl,
 dd {
   margin: 0;
 }
+
+body {
+  position: relative;
+  width: 1600px;
+  height: 4289px;
+  margin: auto;
+  background: #FFFFFF;
+
+  header {
+    background-image: url("../img/background-header/Bg@2x.svg");
+    height: 810px;
+
+    .header-logo {
+      position: absolute;
+      width: 78px;
+      height: 100px;
+      left: 224px;
+      top: 32px;
+
+      .logo {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: url("../img/logo-salt/logo-salt-2x.svg");
+      }
+    }
+
+    nav {
+      position: absolute;
+      width: 574px;
+      height: 26px;
+      left: 802px;
+      top: 80px;
+      //background-color: orangered;
+
+      .nav-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0;
+        gap: 28px;
+
+        position: absolute;
+        width: 570px;
+        height: 18px;
+        left: 4px;
+        top: 0;
+        background-color: orangered;
+
+        .home {
+          width: 45px;
+          height: 18px;
+          //font-family: 'Proxima Nova';
+          font-family: 'Arial';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 18px;
+          color: #FFFFFF;
+          flex: none;
+          order: 0;
+          flex-grow: 0;
+          background-color: orangered;
+        }
+      }
+    }
+  }
+
+  .container {
+    width: 1600px;
+  }
+}

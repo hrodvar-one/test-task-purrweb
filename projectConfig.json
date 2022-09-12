@@ -7,12 +7,16 @@
       ],
       "style": [
         "/assets/css/app.scss"
+      ],
+      "image": [
+        "/assets/img/**/*.*"
       ]
     },
     "dist": {
       "distPath": "./dist",
       "html": "/",
-      "style": "/assets/css/"
+      "style": "/assets/css/",
+      "image": "/assets/img"
     }
   }
 }

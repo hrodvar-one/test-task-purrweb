@@ -19,16 +19,24 @@ const projectConfig = require('./projectConfig.json');
 
 const path = projectConfig.path;
 
+// html
+path.src.html[0] =  path.src.srcPath + path.src.html[0];
+
 path.src.style[0] = path.src.srcPath + path.src.style[0];
 
 path.dist.style = path.dist.distPath + path.dist.style;
 
 path.watch = {};
 
+// Отслеживаем все scss файлы, которые находятся в папке src
 path.watch.style = [];
 path.watch.style[0]  = path.src.style[0].replace( path.src.style[0].split('/').pop(), '**/*.scss' );
 
-path.watch.html = ['/index.html'];
+// Отслеживаем все html файлы, которые находятся в папке src
+path.watch.html = [];
+path.watch.html[0] = path.src.html[0];
+
+// path.watch.html = ['/index.html'];
 
 // Проверка на Dev режим
 
@@ -75,14 +83,19 @@ function scss(){
 		.pipe(browserSync.reload({stream: true}))
 }
 
-function watch(){
-	// gulp.watch(path.watch.html, njk);
+function imgCopyToDist() {
+	return gulp.src('./src/assets/img/**/*.*')
+		.pipe(gulp.dest('./dist/assets/img'))
+		// .on('end', browserSync.reload);
+}
+
+function watch() {
 	gulp.watch(path.watch.html, htmlCopyToDist);
 	gulp.watch(path.watch.style, scss);
 }
 
 exports.default = gulp.series(
 	gulp.parallel(htmlCopyToDist, scss),
-	// gulp.parallel(scss),
+	gulp.parallel(imgCopyToDist),
 	gulp.parallel(browsersync, watch)
 );
