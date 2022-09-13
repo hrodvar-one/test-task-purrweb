@@ -70,7 +70,6 @@ body {
         height: 18px;
         left: 4px;
         top: 0;
-        background-color: orangered;
 
         .home {
           width: 45px;
@@ -81,11 +80,14 @@ body {
           font-weight: 700;
           font-size: 15px;
           line-height: 18px;
+          /* identical to box height, or 120% */
+
           color: #FFFFFF;
+
+          /* Inside auto layout */
           flex: none;
           order: 0;
           flex-grow: 0;
-          background-color: orangered;
         }
       }
     }

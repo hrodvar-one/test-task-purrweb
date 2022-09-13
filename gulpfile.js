@@ -10,6 +10,10 @@ const autoprefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
 const rename = require("gulp-rename");
 const gcmq = require('gulp-group-css-media-queries');
+const ttf2woff = require('gulp-ttf2woff');
+const ttf2woff2 = require('gulp-ttf2woff2');
+const fonter = require('gulp-fonter');
+// const del = require('del');
 
 // Подключение файла настроек
 
@@ -18,6 +22,12 @@ const projectConfig = require('./projectConfig.json');
 // Значения путей проекта
 
 const path = projectConfig.path;
+
+// Определяем массив для настройки путей шрифтов
+path.src.font[0] = path.src.srcPath + path.src.font[0];
+path.src.font[1] = "!" + path.src.font[0].slice(0, -6) + "src/*.*";
+
+path.dist.font = path.dist.distPath + path.dist.font;
 
 // html
 path.src.html[0] =  path.src.srcPath + path.src.html[0];
@@ -36,7 +46,10 @@ path.watch.style[0]  = path.src.style[0].replace( path.src.style[0].split('/').p
 path.watch.html = [];
 path.watch.html[0] = path.src.html[0];
 
-// path.watch.html = ['/index.html'];
+// Отслеживаем шрифты
+path.watch.font = [];
+path.watch.font[0] = path.src.font[0];
+path.watch.font[1] = "!" + path.src.font[0].slice(0, -6) + "src/*.*";
 
 // Проверка на Dev режим
 
@@ -58,6 +71,47 @@ function browsersync() {
 		server: path.dist.distPath
 	});
 }
+
+// Таски для преобразования шрифтов
+
+function ttf2woff2Converter() {
+	return gulp.src(path.src.font[0].slice(0, -6) + "src/*.ttf")
+		.pipe(ttf2woff2())
+		.pipe(gulp.dest(path.src.font[0].slice(0, -6)));
+}
+
+function ttf2woffConverter() {
+	return gulp.src(path.src.font[0].slice(0, -6) + "src/*.ttf")
+		.pipe(ttf2woff())
+		.pipe(gulp.dest(path.src.font[0].slice(0, -6)));
+}
+
+function otf2ttf() {
+	return gulp.src(path.src.font[0].slice(0, -6) + "src/*")
+		.pipe(fonter({
+			formats: ['ttf']
+		}))
+		.pipe(gulp.dest(path.src.font[0].slice(0, -6) + "src"));
+}
+
+const fontsConvert = gulp.series(otf2ttf, ttf2woff2Converter, ttf2woffConverter);
+// const fontsConvert = gulp.series(ttf2woff2Converter, ttf2woffConverter);
+
+// exports.otf2ttf = otf2ttf;
+// exports.ttf2woffConverter = ttf2woffConverter;
+// exports.ttf2woff2Converter = ttf2woff2Converter;
+exports.fontsConvert = fontsConvert;
+
+function font() {
+	return gulp.src(path.src.font)
+		.pipe(gulp.dest(path.dist.font))
+		.on('end', browserSync.reload);
+}
+
+// Чтобы шрифты с расширением ttf конвертировать в woff2 и woff, необходимо ввести команду:
+// npm run dev fontsConvert
+// После этой команды все ttf шрифты с каталога src/fonts/src преобразуются в современные форматы и скопируются в папку
+// /src/assets/fonts
 
 // Функция копирования index.html из dev в prod
 
@@ -86,16 +140,24 @@ function scss(){
 function imgCopyToDist() {
 	return gulp.src('./src/assets/img/**/*.*')
 		.pipe(gulp.dest('./dist/assets/img'))
-		// .on('end', browserSync.reload);
+		.on('end', browserSync.reload);
 }
+
+// //Функция очистки папки dist до запуска основных скриптов
+//
+// function clean(){
+// 	return del([path.dist.distPath]);
+// }
 
 function watch() {
 	gulp.watch(path.watch.html, htmlCopyToDist);
 	gulp.watch(path.watch.style, scss);
+	gulp.watch(path.watch.font, font);
 }
 
 exports.default = gulp.series(
-	gulp.parallel(htmlCopyToDist, scss),
+	// gulp.parallel(clean),
+	gulp.parallel(htmlCopyToDist, scss, font),
 	gulp.parallel(imgCopyToDist),
 	gulp.parallel(browsersync, watch)
 );
