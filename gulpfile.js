@@ -13,6 +13,7 @@ const gcmq = require('gulp-group-css-media-queries');
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const fonter = require('gulp-fonter');
+const clean = require('gulp-clean');
 // const del = require('del');
 
 // Подключение файла настроек
@@ -95,11 +96,7 @@ function otf2ttf() {
 }
 
 const fontsConvert = gulp.series(otf2ttf, ttf2woff2Converter, ttf2woffConverter);
-// const fontsConvert = gulp.series(ttf2woff2Converter, ttf2woffConverter);
 
-// exports.otf2ttf = otf2ttf;
-// exports.ttf2woffConverter = ttf2woffConverter;
-// exports.ttf2woff2Converter = ttf2woff2Converter;
 exports.fontsConvert = fontsConvert;
 
 function font() {
@@ -143,12 +140,16 @@ function imgCopyToDist() {
 		.on('end', browserSync.reload);
 }
 
-// //Функция очистки папки dist до запуска основных скриптов
-//
-// function clean(){
-// 	return del([path.dist.distPath]);
-// }
+// Функция очистки папки dist до запуска основных скриптов
 
+function clear() {
+	return gulp.src('./dist/*', {read: false})
+		.pipe(clean());
+}
+
+exports.clear = clear;
+
+// Функция отслеживания изменения в файлах
 function watch() {
 	gulp.watch(path.watch.html, htmlCopyToDist);
 	gulp.watch(path.watch.style, scss);
@@ -156,7 +157,7 @@ function watch() {
 }
 
 exports.default = gulp.series(
-	// gulp.parallel(clean),
+	gulp.parallel(clear),
 	gulp.parallel(htmlCopyToDist, scss, font),
 	gulp.parallel(imgCopyToDist),
 	gulp.parallel(browsersync, watch)
