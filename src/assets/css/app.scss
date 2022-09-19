@@ -1,3 +1,44 @@
+@font-face {
+  font-family: Proxima Nova;
+  src: url(../fonts/proxima-nova-bold.woff2) format('woff2'),
+       url(../fonts/proxima-nova-bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(../fonts/proxima-nova-regular.woff2) format('woff2'),
+       url(../fonts/proxima-nova-regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  src: url(../fonts/proxima-nova-semibold.woff2) format('woff2'),
+       url(../fonts/proxima-nova-semibold.woff) format('woff');
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-ExtraBold.woff2) format('woff2'),
+       url(../fonts/Raleway-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-Medium.woff2) format('woff2'),
+       url(../fonts/Raleway-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url(../fonts/Raleway-SemiBold.woff2) format('woff2'),
+       url(../fonts/Raleway-SemiBold.woff) format('woff');
+}
+
+/* Глобальные переменные */
+:root {
+  --primary-color: green();
+}
+
 /* Убираем внутренние отступы */
 ul[class],
 ol[class] {
@@ -29,18 +70,18 @@ body {
   margin: auto;
   background: #FFFFFF;
 
-  header {
+  .header {
     background-image: url("../img/background-header/Bg@2x.svg");
     height: 810px;
 
-    .header-logo {
+    .header__logo {
       position: absolute;
       width: 78px;
       height: 100px;
       left: 224px;
       top: 32px;
 
-      .logo {
+      .header__logo-img {
         position: absolute;
         left: 0;
         right: 0;
@@ -50,15 +91,14 @@ body {
       }
     }
 
-    nav {
+    .header__nav {
       position: absolute;
       width: 574px;
       height: 26px;
       left: 802px;
       top: 80px;
-      //background-color: orangered;
 
-      .nav-menu {
+      .header__menu {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -71,11 +111,10 @@ body {
         left: 4px;
         top: 0;
 
-        .home {
-          width: 45px;
+        .header__item {
           height: 18px;
-          //font-family: 'Proxima Nova';
-          font-family: 'Arial';
+
+          font-family: Proxima Nova;
           font-style: normal;
           font-weight: 700;
           font-size: 15px;
@@ -86,10 +125,204 @@ body {
 
           /* Inside auto layout */
           flex: none;
-          order: 0;
           flex-grow: 0;
+
+          &._home {
+            width: 45px;
+            order: 0;
+          }
+
+          &._products {
+            width: 81px;
+            order: 1;
+          }
+
+          &._services {
+            width: 70px;
+            order: 2;
+          }
+
+          &._resources {
+            width: 88px;
+            order: 3;
+          }
+
+          &._about {
+            width: 52px;
+            order: 4;
+          }
+
+          &._contact {
+            width: 94px;
+            order: 5;
+          }
         }
       }
+    }
+
+    .active {
+      position: absolute;
+      width: 53px;
+      height: 0;
+      left: 0;
+      top: 26px;
+
+      border: 2px solid #FF8B00;
+    }
+
+    .authentication {
+      position: absolute;
+      width: 552px;
+      height: 55px;
+      left: 306px;
+      top: 261px;
+
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 55px;
+      line-height: 55px;
+      /* identical to box height, or 100% */
+
+
+      color: #FFFFFF;
+    }
+
+    .salt {
+      position: absolute;
+      width: 548px;
+      height: 90px;
+      left: 306px;
+      top: 328px;
+
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 30px;
+      /* or 188% */
+
+
+      color: #FFFFFF;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      //padding: 4px 40px;
+      gap: 10px;
+
+      position: absolute;
+      width: 174px;
+      height: 53px;
+      left: 306px;
+      top: 462px;
+
+      background: #FF8B00;
+      border-radius: 4px;
+
+      span {
+        width: 91px;
+        height: 45px;
+        padding: 4px 40px;
+
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 45px;
+        /* identical to box height, or 321% */
+
+
+        color: #FFFFFF;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+      }
+    }
+
+    .header-logo-twitter {
+      position: absolute;
+      width: 151px;
+      //height: 124px;
+      height: 125px;
+      left: 1078px;
+      top: 332px;
+
+      .logo-twitter {
+        position: absolute;
+        left: 0.4%;
+        right: 0.34%;
+        top: 0.73%;
+        bottom: 1.22%;
+
+        //background: #FFFFFF;
+        background: url("../img/logo-twitter/Twitter@2x.svg");
+      }
+    }
+
+    .polygon {
+      position: absolute;
+      width: 19px;
+      height: 22px;
+      left: 1527px;
+      top: 335px;
+
+      background: #FF8B00;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .polygon-two {
+      position: absolute;
+      width: 19px;
+      height: 22px;
+      left: 1527px;
+      top: 369px;
+
+      background: url("../img/polygon-stroke/Polygon (Stroke)@2x.svg");
+    }
+
+    .polygon-three {
+      position: absolute;
+      width: 19px;
+      height: 22px;
+      left: 1527px;
+      top: 404px;
+
+      background: url("../img/polygon-stroke/Polygon (Stroke)@2x.svg");
+    }
+
+    .find-out-more {
+      position: absolute;
+      width: 116px;
+      height: 20px;
+      left: 742px;
+      top: 650px;
+
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 20px;
+      /* identical to box height, or 133% */
+
+      color: #FFFFFF;
+    }
+
+    .union {
+      position: absolute;
+      width: 62px;
+      height: 71px;
+      left: 769px;
+      top: 689px;
+
+      background: url("../img/union/Union@2x.svg");
     }
   }
 
