@@ -111,7 +111,7 @@ body {
         left: 4px;
         top: 0;
 
-        .header__item {
+        .menu__item {
           height: 18px;
 
           font-family: Proxima Nova;
@@ -158,19 +158,19 @@ body {
           }
         }
       }
+
+      .header__active {
+        position: absolute;
+        width: 52px;
+        height: 0;
+        left: -2px;
+        top: 26px;
+
+        border: 2px solid #FF8B00;
+      }
     }
 
-    .active {
-      position: absolute;
-      width: 53px;
-      height: 0;
-      left: 0;
-      top: 26px;
-
-      border: 2px solid #FF8B00;
-    }
-
-    .authentication {
+    .header__authentication {
       position: absolute;
       width: 552px;
       height: 55px;
@@ -188,7 +188,7 @@ body {
       color: #FFFFFF;
     }
 
-    .salt {
+    .header__salt {
       position: absolute;
       width: 548px;
       height: 90px;
@@ -206,7 +206,7 @@ body {
       color: #FFFFFF;
     }
 
-    .button {
+    .header__button {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -247,7 +247,7 @@ body {
       }
     }
 
-    .header-logo-twitter {
+    .header__logo-twitter {
       position: absolute;
       width: 151px;
       //height: 124px;
@@ -267,7 +267,7 @@ body {
       }
     }
 
-    .polygon {
+    .header__polygon-one {
       position: absolute;
       width: 19px;
       height: 22px;
@@ -278,7 +278,7 @@ body {
       clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     }
 
-    .polygon-two {
+    .header__polygon-two {
       position: absolute;
       width: 19px;
       height: 22px;
@@ -288,7 +288,7 @@ body {
       background: url("../img/polygon-stroke/Polygon (Stroke)@2x.svg");
     }
 
-    .polygon-three {
+    .header__polygon-three {
       position: absolute;
       width: 19px;
       height: 22px;
@@ -298,7 +298,7 @@ body {
       background: url("../img/polygon-stroke/Polygon (Stroke)@2x.svg");
     }
 
-    .find-out-more {
+    .header__find-out-more {
       position: absolute;
       width: 116px;
       height: 20px;
@@ -315,7 +315,7 @@ body {
       color: #FFFFFF;
     }
 
-    .union {
+    .header__union {
       position: absolute;
       width: 62px;
       height: 71px;
@@ -328,5 +328,511 @@ body {
 
   .container {
     width: 1600px;
+
+    .container__1 {
+      position: absolute;
+      width: 255px;
+      height: 118px;
+      left: 346px;
+      top: 943px;
+      text-align: center;
+
+      .container__span {
+
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 68px;
+        /* identical to box height, or 113% */
+
+
+        color: #7050E5;
+
+      }
+
+      .container__p_1 {
+        position: absolute;
+        width: 255px;
+        height: 36px;
+        //left: 696px;
+        top: 82px;
+
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        /* or 112% */
+
+        text-align: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+
+        color: #7050E5;
+      }
+    }
+
+    .container__2 {
+      position: absolute;
+      width: 213px;
+      height: 118px;
+      left: 693px;
+      top: 943px;
+
+      .container__group-16 {
+        text-align: center;
+
+        .container__span_2 {
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 60px;
+          line-height: 68px;
+          /* identical to box height, or 113% */
+
+          color: #7050E5;
+        }
+
+        .container__p_2 {
+          position: absolute;
+          width: 213px;
+          height: 36px;
+          //left: 696px;
+          top: 82px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 18px;
+          /* or 112% */
+
+          text-align: center;
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+
+          color: #7050E5;
+        }
+      }
+    }
+
+    .container__3 {
+      position: absolute;
+      width: 247px;
+      height: 118px;
+      left: 998px;
+      top: 943px;
+
+      .container__group-17 {
+        text-align: center;
+
+        .container__span_3 {
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 60px;
+          line-height: 68px;
+          /* identical to box height, or 113% */
+
+          color: #7050E5;
+        }
+
+        .container__p_3 {
+          position: absolute;
+          width: 247px;
+          height: 36px;
+          //left: 696px;
+          top: 82px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 18px;
+          /* or 112% */
+
+          //text-align: center;
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+
+          color: #7050E5;
+        }
+      }
+    }
+
+    .container__what-we-do {
+      position: absolute;
+      width: 1600px;
+      height: 1215px;
+      left: 0;
+      top: 1192px;
+
+      background: #F8F8F8;
+
+      .container__union {
+        position: absolute;
+        width: 46px;
+        height: 46px;
+        left: 1257px;
+        top: 126px;
+
+        .container__rectangle_2 {
+          position: absolute;
+          width: 46px;
+          height: 12px;
+          left: 17px;
+          top: 17px;
+
+          background: #FF8B00;
+          transform: rotate(90deg);
+        }
+
+        .container__rectangle_3 {
+          position: absolute;
+          width: 46px;
+          height: 12px;
+
+          background: #FF8B00;
+        }
+      }
+
+      .container__h1 {
+        position: absolute;
+        width: 337px;
+        height: 72px;
+        left: 901px;
+        top: 145px;
+        //top: 1337px;
+
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 72px;
+        /* identical to box height, or 120% */
+
+        color: #7050E5;
+
+      }
+
+      .container__device-authentication {
+        position: absolute;
+        width: 271px;
+        height: 316px;
+        left: 304px;
+        top: 288px;
+
+        .container__illustration {
+          position: absolute;
+          width: 142px;
+          height: 146px;
+          left: 39px;
+
+          .container__illustration-img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            background: url("../img/container-device-authentication-illustration/Rectangle 1252@2x.svg");
+          }
+        }
+
+        .container__h3 {
+          position: absolute;
+          width: 215px;
+          height: 20px;
+          top: 174px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 20px;
+          /* identical to box height, or 111% */
+
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+
+          color: #7050E5;
+        }
+
+        .container__p_4 {
+          position: absolute;
+          width: 271px;
+          height: 114px;
+          top: 202px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 19px;
+          /* or 127% */
+
+          letter-spacing: -0.008em;
+
+          color: #878787;
+        }
+      }
+
+      .user-authentication {
+        position: absolute;
+        width: 241px;
+        height: 263px;
+        left: 675px;
+        top: 288px;
+
+        .user-authentication__illustration {
+          position: absolute;
+          width: 160px;
+          height: 150px;
+          left: 40px;
+
+          .user-authentication__img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            background: url("../img/container-device-user-authentication/Rectangle 1253@2x.svg");
+          }
+        }
+
+        .user-authentication__h3 {
+          position: absolute;
+          width: 241px;
+          height: 20px;
+          top: 178px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 20px;
+          /* identical to box height, or 111% */
+
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+
+          color: #7050E5;
+        }
+
+        .user-authentication__p {
+          position: absolute;
+          width: 241px;
+          height: 57px;
+          top: 206px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 19px;
+          /* or 127% */
+
+          letter-spacing: -0.02em;
+
+          color: #878787;
+        }
+      }
+
+      .transaction-authentication {
+        position: absolute;
+        width: 281px;
+        height: 319px;
+        left: 1016px;
+        top: 285px;
+
+        .transaction-authentication__illustration {
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          left: 57px;
+
+          .transaction-authentication__img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            background: url("../img/container-transaction-authentication-illustration/Rectangle@2x.svg");
+          }
+        }
+
+        .transaction-authentication__h3 {
+          position: absolute;
+          width: 274px;
+          height: 20px;
+          //left: 1016px;
+          top: 177px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 20px;
+          /* identical to box height, or 111% */
+
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+
+          color: #7050E5;
+        }
+
+        .transaction-authentication__p {
+          position: absolute;
+          width: 281px;
+          height: 114px;
+          //left: 1016px;
+          top: 205px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 19px;
+          /* or 127% */
+
+          letter-spacing: -0.02em;
+
+          color: #878787;
+
+        }
+      }
+
+      .contemporary-authentication-methods {
+        position: absolute;
+        width: 271px;
+        height: 419px;
+        left: 306px;
+        top: 676px;
+
+        .contemporary-authentication-methods__illustration {
+          position: absolute;
+          width: 132px;
+          height: 139px;
+          left: 56px;
+
+          .contemporary-authentication-methods__img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            background: url("../img/container-contemporary-authentication-methods-illustration/Vector Smart Object_3@2x.svg");
+          }
+        }
+
+        .contemporary-authentication-methods__h3 {
+          position: absolute;
+          width: 238px;
+          height: 40px;
+          top: 164px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 20px;
+          /* or 111% */
+
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+
+          color: #7050E5;
+        }
+
+        .contemporary-authentication-methods__p {
+          position: absolute;
+          width: 271px;
+          height: 209px;
+          //left: 306px;
+          top: 210px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 19px;
+          /* or 127% */
+
+          //letter-spacing: -0.008em;
+          letter-spacing: -0.02em;
+
+          color: #878787;
+        }
+      }
+
+      .hsm-solutions {
+        position: absolute;
+        width: 241px;
+        height: 278px;
+        left: 675px;
+        top: 685px;
+
+        .hsm-solutions__illustration {
+          position: absolute;
+          width: 191px;
+          height: 127px;
+          left: 37px;
+
+          .hsm-solutions__img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            background: url("../img/hsm-solutions-illustration/Vector Smart Object_5@2x.svg");
+          }
+        }
+
+        .hsm-solutions__h3 {
+          position: absolute;
+          width: 241px;
+          height: 20px;
+          //left: 675px;
+          top: 155px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 20px;
+          /* identical to box height, or 111% */
+
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+
+          color: #7050E5;
+        }
+
+        .hsm-solutions__p {
+          position: absolute;
+          width: 241px;
+          height: 95px;
+          top: 183px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 19px;
+          /* or 127% */
+
+          letter-spacing: -0.02em;
+
+          color: #878787;
+        }
+      }
+    }
   }
 }
