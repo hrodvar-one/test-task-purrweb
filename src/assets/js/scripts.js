@@ -1,3 +1,5 @@
-function activeHeaderMenuItem () {
+// Функция запуска/остановки видео
+
+function startPauseVideo () {
 
 }

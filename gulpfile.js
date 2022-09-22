@@ -134,9 +134,19 @@ function scss(){
 		.pipe(browserSync.reload({stream: true}))
 }
 
+// Функция копирования img из dev в prod
+
 function imgCopyToDist() {
 	return gulp.src('./src/assets/img/**/*.*')
 		.pipe(gulp.dest('./dist/assets/img'))
+		.on('end', browserSync.reload);
+}
+
+// Функция копирования video из dev в prod
+
+function videoCopyToDist() {
+	return gulp.src('./src/assets/video/**/*.*')
+		.pipe(gulp.dest('./dist/assets/video'))
 		.on('end', browserSync.reload);
 }
 
@@ -160,5 +170,6 @@ exports.default = gulp.series(
 	gulp.parallel(clear),
 	gulp.parallel(htmlCopyToDist, scss, font),
 	gulp.parallel(imgCopyToDist),
+	gulp.parallel(videoCopyToDist),
 	gulp.parallel(browsersync, watch)
 );
