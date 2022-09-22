@@ -833,6 +833,70 @@ body {
           color: #878787;
         }
       }
+
+      .cloud-iot-security {
+        position: absolute;
+        width: 266px;
+        height: 259px;
+        left: 1016px;
+        top: 704px;
+
+        .cloud-iot-security__illustration {
+          position: absolute;
+          width: 210px;
+          height: 108px;
+          left: 29px;
+
+          .cloud-iot-security__img {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+
+            background: url("../img/container-cloud-iot-security-illustration/Ellipse 667@2x.svg");
+
+          }
+        }
+
+        .cloud-iot-security__h3 {
+          position: absolute;
+          width: 194px;
+          height: 20px;
+          top: 136px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 20px;
+          /* identical to box height, or 111% */
+
+          letter-spacing: -0.02em;
+          text-transform: uppercase;
+
+          color: #7050E5;
+        }
+
+        .cloud-iot-security__p {
+          position: absolute;
+          width: 266px;
+          height: 95px;
+          top: 164px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 19px;
+          /* or 127% */
+
+          letter-spacing: -0.02em;
+
+          color: #878787;
+
+        }
+      }
     }
   }
 }
