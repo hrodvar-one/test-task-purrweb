@@ -13,6 +13,9 @@
       ],
       "image": [
         "/assets/img/**/*.*"
+      ],
+      "js": [
+        "/assets/js/**/*.*"
       ]
     },
     "dist": {
@@ -20,7 +23,8 @@
       "font": "/assets/fonts/",
       "html": "/",
       "style": "/assets/css/",
-      "image": "/assets/img"
+      "image": "/assets/img",
+      "js": "/assets/js"
     }
   }
 }

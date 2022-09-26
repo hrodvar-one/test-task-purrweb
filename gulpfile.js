@@ -35,6 +35,8 @@ path.src.html[0] =  path.src.srcPath + path.src.html[0];
 
 path.src.style[0] = path.src.srcPath + path.src.style[0];
 
+path.src.js[0] = path.src.srcPath + path.src.js[0];
+
 path.dist.style = path.dist.distPath + path.dist.style;
 
 path.watch = {};
@@ -51,6 +53,10 @@ path.watch.html[0] = path.src.html[0];
 path.watch.font = [];
 path.watch.font[0] = path.src.font[0];
 path.watch.font[1] = "!" + path.src.font[0].slice(0, -6) + "src/*.*";
+
+// Отслеживаем JS
+path.watch.js = [];
+path.watch.js[0] = path.src.js[0];
 
 // Проверка на Dev режим
 
@@ -150,6 +156,14 @@ function videoCopyToDist() {
 		.on('end', browserSync.reload);
 }
 
+// Функция копирования js из dev в prod
+
+function jsCopyToDist() {
+	return gulp.src('./src/assets/js/**/*.*')
+		.pipe(gulp.dest('./dist/assets/js'))
+		.on('end', browserSync.reload);
+}
+
 // Функция очистки папки dist до запуска основных скриптов
 
 function clear() {
@@ -164,6 +178,7 @@ function watch() {
 	gulp.watch(path.watch.html, htmlCopyToDist);
 	gulp.watch(path.watch.style, scss);
 	gulp.watch(path.watch.font, font);
+	gulp.watch(path.watch.js, jsCopyToDist);
 }
 
 exports.default = gulp.series(
@@ -171,5 +186,6 @@ exports.default = gulp.series(
 	gulp.parallel(htmlCopyToDist, scss, font),
 	gulp.parallel(imgCopyToDist),
 	gulp.parallel(videoCopyToDist),
+	gulp.parallel(jsCopyToDist),
 	gulp.parallel(browsersync, watch)
 );
