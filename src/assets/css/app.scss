@@ -1070,5 +1070,314 @@ body {
         }
       }
     }
+
+    .container__contact-us {
+      position: absolute;
+      width: 1600px;
+      height: 707px;
+      left: 0;
+      bottom: 520px;
+
+      background: #232323;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+      overflow: hidden;
+
+      .contact-us__rectangle-1650 {
+        position: absolute;
+
+        width: 472.1px;
+        height: 478.61px;
+
+        left: 57%;
+        top: 58.2%;
+
+        background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+        opacity: 0.3;
+        filter: blur(125px);
+        border-radius: 236.048px;
+        transform: rotate(5.78deg);
+      }
+
+      .contact-us__rectangle-1595 {
+        position: absolute;
+
+        width: 746.86px;
+        height: 757.17px;
+
+        left: -9.35%;
+        top: -42.2%;
+
+        background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
+        opacity: 0.33;
+        filter: blur(125px);
+        border-radius: 373.431px;
+        transform: rotate(-122.79deg);
+      }
+
+      .contact-us__ready-to-get {
+        position: absolute;
+        width: 361px;
+        height: 110px;
+        left: 200px;
+        top: 128px;
+
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 55px;
+        /* or 100% */
+
+        color: #FFFFFF;
+      }
+
+      .contact-us__group-19 {
+        position: absolute;
+        width: 675px;
+        height: 467px;
+        left: 788px;
+        top: 120px;
+
+        .group-19__p1 {
+          position: absolute;
+          width: 672px;
+          height: 41px;
+          //left: 791px;
+          //top: 120px;
+
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 0px;
+          /* or 0% */
+
+          display: flex;
+          align-items: center;
+          letter-spacing: -0.02666em;
+
+          color: #FFFFFF;
+        }
+
+        .group-19__first-name-group {
+          position: absolute;
+          width: 308px;
+          height: 67px;
+          //left: 791px;
+          top: 69px;
+
+          //background: #FF8B00;
+
+          label {
+            position: absolute;
+            width: 66px;
+            height: 19px;
+            left: 4px;
+            //top: 189px;
+
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 1px;
+            /* or 8% */
+
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
+          }
+
+          input {
+            position: absolute;
+            width: 308px;
+            height: 40px;
+
+            box-sizing: border-box;
+
+            left: 0;
+            right: 0;
+            top: 27px;
+            bottom: 0;
+
+            background: #FFFFFF;
+            border: 1px solid #292929;
+            border-radius: 8px;
+          }
+        }
+
+        .group-19__last-name-group {
+          position: absolute;
+          width: 308px;
+          height: 67px;
+          left: 328px;
+          top: 69px;
+
+          label {
+            position: absolute;
+            width: 66px;
+            height: 19px;
+            left: 4px;
+
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 1px;
+            /* or 8% */
+
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
+          }
+
+          input {
+            position: absolute;
+            width: 308px;
+            height: 40px;
+
+            box-sizing: border-box;
+
+            left: 0;
+            right: 0;
+            top: 27px;
+            bottom: 0;
+
+            background: #FFFFFF;
+            border: 1px solid #292929;
+            border-radius: 8px;
+          }
+        }
+
+        .group-19__email {
+          position: absolute;
+          width: 640px;
+          height: 67px;
+          //left: 328px;
+          top: 164px;
+
+          label {
+            position: absolute;
+            width: 85px;
+            height: 19px;
+            left: 4px;
+
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 1px;
+            /* or 8% */
+
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
+          }
+
+          input {
+            position: absolute;
+            width: 640px;
+            height: 40px;
+
+            box-sizing: border-box;
+
+            left: 0;
+            right: 0;
+            top: 27px;
+            bottom: 0;
+
+            background: #FFFFFF;
+            border: 1px solid #292929;
+            border-radius: 8px;
+          }
+        }
+
+        .group-19__your-message {
+          position: absolute;
+          width: 640px;
+          height: 67px;
+          top: 259px;
+
+          label {
+            position: absolute;
+            width: 85px;
+            height: 19px;
+            left: 4px;
+
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 1px;
+            /* or 8% */
+
+            display: flex;
+            align-items: center;
+
+            color: #FFFFFF;
+          }
+
+          input {
+            position: absolute;
+            width: 640px;
+            height: 96px;
+
+            box-sizing: border-box;
+
+            left: 0;
+            right: 0;
+            top: 27px;
+            bottom: 0;
+
+            background: #FFFFFF;
+            border: 1px solid #292929;
+            border-radius: 8px;
+          }
+        }
+
+        .group-19__button {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 4px 40px;
+          gap: 10px;
+
+          position: absolute;
+          width: 201px;
+          height: 53px;
+          //left: 788px;
+          top: 414px;
+
+          background: #FF8B00;
+          border-radius: 4px;
+
+          .group-19__span {
+            width: 37px;
+
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 18px;
+            /* identical to box height, or 129% */
+
+
+            color: #FFFFFF;
+
+
+            /* Inside auto layout */
+
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
   }
 }
