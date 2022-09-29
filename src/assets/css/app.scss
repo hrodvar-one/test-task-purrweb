@@ -1164,17 +1164,13 @@ body {
           position: absolute;
           width: 308px;
           height: 67px;
-          //left: 791px;
           top: 69px;
-
-          //background: #FF8B00;
 
           label {
             position: absolute;
             width: 66px;
             height: 19px;
             left: 4px;
-            //top: 189px;
 
             font-family: 'Proxima Nova';
             font-style: normal;
@@ -1193,6 +1189,7 @@ body {
             position: absolute;
             width: 308px;
             height: 40px;
+            padding: 9px 13px;
 
             box-sizing: border-box;
 
@@ -1204,6 +1201,22 @@ body {
             background: #FFFFFF;
             border: 1px solid #292929;
             border-radius: 8px;
+
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 7px;
+            /* or 50% */
+
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+
+            &::placeholder {
+              color: #9E9E9E;
+            }
           }
         }
 
@@ -1237,6 +1250,7 @@ body {
             position: absolute;
             width: 308px;
             height: 40px;
+            padding: 9px 13px;
 
             box-sizing: border-box;
 
@@ -1248,6 +1262,22 @@ body {
             background: #FFFFFF;
             border: 1px solid #292929;
             border-radius: 8px;
+
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 7px;
+            /* or 50% */
+
+            display: flex;
+            align-items: center;
+
+            color: #000000;
+
+            &::placeholder {
+              color: #9E9E9E;
+            }
           }
         }
 
@@ -1255,7 +1285,6 @@ body {
           position: absolute;
           width: 640px;
           height: 67px;
-          //left: 328px;
           top: 164px;
 
           label {
@@ -1281,17 +1310,26 @@ body {
             position: absolute;
             width: 640px;
             height: 40px;
-
-            box-sizing: border-box;
-
-            left: 0;
-            right: 0;
+            padding: 9px 13px;
             top: 27px;
-            bottom: 0;
-
+            box-sizing: border-box;
             background: #FFFFFF;
             border: 1px solid #292929;
             border-radius: 8px;
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 7px;
+            /* or 50% */
+
+            display: flex;
+            align-items: center;
+            color: #3D3D3D;
+
+            &::placeholder {
+              opacity: 0.5;
+            }
           }
         }
 
@@ -1320,12 +1358,14 @@ body {
             color: #FFFFFF;
           }
 
-          input {
+          textarea {
             position: absolute;
             width: 640px;
             height: 96px;
+            padding: 15px 13px;
 
             box-sizing: border-box;
+            resize: none;
 
             left: 0;
             right: 0;
@@ -1335,6 +1375,20 @@ body {
             background: #FFFFFF;
             border: 1px solid #292929;
             border-radius: 8px;
+
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: normal;
+            /* or 50% */
+
+            color: #3D3D3D;
+
+            &::placeholder {
+              //transform: translateY(1px);
+              opacity: 0.5;
+            }
           }
         }
 
@@ -1349,7 +1403,6 @@ body {
           position: absolute;
           width: 201px;
           height: 53px;
-          //left: 788px;
           top: 414px;
 
           background: #FF8B00;
@@ -1362,12 +1415,10 @@ body {
             font-style: normal;
             font-weight: 700;
             font-size: 14px;
-            line-height: 18px;
+            line-height: 20px;
             /* identical to box height, or 129% */
 
-
             color: #FFFFFF;
-
 
             /* Inside auto layout */
 
