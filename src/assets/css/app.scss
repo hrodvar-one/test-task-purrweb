@@ -1431,4 +1431,28 @@ body {
       }
     }
   }
+
+  .footer {
+    position: absolute;
+    width: 1600px;
+    height: 423px;
+    left: 0;
+    bottom: 0;
+
+    background: #363636;
+
+    .footer__news-feed {
+      position: absolute;
+      width: 299px;
+      height: 295px;
+      left: 224px;
+      top: 56px;
+
+      background: #FFFFFF;
+
+      .news-feed__twitter {
+
+      }
+    }
+  }
 }
